@@ -7,29 +7,29 @@ def update_greeting():
     greeting = f"Hello, {name}!"
     label_display.config(text=greeting, foreground=color)
 
-# Create main window
+#main window
 root = tk.Tk()
 root.title("Greeting App")
 root.geometry("700x450")
 
-# Create InputFrame with blue background
+# inputframe with blue background
 frame_input = ttk.Frame(root, padding=23, style="Input.TFrame")
 frame_input.grid(row=0, column=0, padx=23, pady=23)
 
-# Create DisplayFrame with green background
+#displayframe with green background
 frame_display = ttk.Frame(root, padding=23, style="Display.TFrame", width=250)
 frame_display.grid(row=0, column=2, padx=23, pady=23)
 
-# Create a custom style for the frames
+#a custom style for frames
 style = ttk.Style()
 
-# Style for InputFrame
+#style for inputframe
 style.configure("Input.TFrame", background="#87CEFB")
 
-# Style for DisplayFrame
+#style for displayframe
 style.configure("Display.TFrame", background="#98FB99")
 
-# Create widgets for InputFrame
+#creating widgets for inputframe
 label_title = ttk.Label(frame_input, text="Welcome!!!", font=("Helvetica", 25, "bold"), foreground="blue")
 label_title.grid(row=0, column=0, columnspan=3, pady=23)
 
@@ -49,7 +49,7 @@ dropdown_color.grid(row=3, column=2, pady=6)
 button_update = ttk.Button(frame_input, text="Update Greeting", command=update_greeting)
 button_update.grid(row=4, column=0, columnspan=3, pady=23)
 
-# Create a label for DisplayFrame
+#label for displayframe
 label_display = ttk.Label(frame_display, font=("Helvetica", 25), anchor="center")
 label_display.pack(expand=True, fill="both")
 
